@@ -14,7 +14,7 @@ const avif = require('gulp-avif');
 
 function css() {
    return (
-      src('src/assets/scss/app.scss')
+      src('src/assets/scss/styles.scss')
          .pipe(sourcemaps.init())
          .pipe(sass())
          // .pipe(postcss([autoprefixer(), cssnano()]))
