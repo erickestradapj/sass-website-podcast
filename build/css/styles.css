@@ -577,8 +577,10 @@ ul {
   }
 }
 
+/* ===== Mobile First =====*/
 .plans {
   background-color: #313c4e;
+  /* ===== Tablet =====*/
 }
 .plans__heading {
   font-size: 3.6rem;
@@ -616,11 +618,33 @@ ul {
   }
 }
 
+/* ===== Mobile First =====*/
 .plan {
   flex-grow: 1;
   background-color: #ffffff;
   padding: 16rem 4rem 4rem 4rem;
   border-bottom: 0.1rem solid #e1e1e1;
+  /* ===== Tablet =====*/
+}
+.plan:nth-child(1) {
+  background-image: url("/build/img/icono_inicio.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 2rem;
+  background-size: 10rem;
+}
+.plan:nth-child(2) {
+  background-color: #84d9bc;
+  background-image: url("/build/img/icono_negocio.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 2rem;
+  background-size: 10rem;
+  order: -1;
+}
+.plan:nth-child(3) {
+  background-image: url("/build/img/icono_pro.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 2rem;
+  background-size: 10rem;
 }
 .plan__price {
   font-size: 1.8rem;
@@ -640,34 +664,7 @@ ul {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
-}
-
-.list__item {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.list__item:last-of-type {
-  margin-bottom: 0;
-}
-
-/* +-+-+-+-+-+- FIXME: +-+-+-+-+-+- */
-.free {
-  background-image: url("/build/img/icono_inicio.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 2rem;
-  background-size: 10rem;
-}
-
-.business {
-  background-color: #84d9bc;
-  background-image: url("/build/img/icono_negocio.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 2rem;
-  background-size: 10rem;
-  order: -1;
-}
-@media (min-width: 768px) {
-  .business {
+  .plan:nth-child(2) {
     order: unset;
     margin-block: -5rem;
     border-radius: 2rem;
@@ -677,14 +674,15 @@ ul {
   }
 }
 
-.pro {
-  background-image: url("/build/img/icono_pro.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 2rem;
-  background-size: 10rem;
+/* ===== Mobile First =====*/
+.list__item {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.list__item:last-of-type {
+  margin-bottom: 0;
 }
 
-/* +-+-+-+-+-+- FIXME: +-+-+-+-+-+- */
 @media (min-width: 768px) {
   .testimonials {
     display: grid;

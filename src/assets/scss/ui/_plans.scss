@@ -1,6 +1,7 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
 
+/* ===== Mobile First =====*/
 .plans {
    background-color: v.$secondary;
 
@@ -17,6 +18,7 @@
       flex-direction: column;
    }
 
+   /* ===== Tablet =====*/
    @include m.tablet {
       &__grid {
          flex-direction: row;
@@ -27,11 +29,26 @@
    }
 }
 
+/* ===== Mobile First =====*/
 .plan {
    flex-grow: 1;
    background-color: v.$white;
    padding: 16rem 4rem 4rem 4rem;
    border-bottom: 0.1rem solid #e1e1e1;
+
+   &:nth-child(1) {
+      @include m.iconBg('/build/img/icono_inicio.svg');
+   }
+
+   &:nth-child(2) {
+      background-color: v.$primary;
+      @include m.iconBg('/build/img/icono_negocio.svg');
+      order: -1;
+   }
+
+   &:nth-child(3) {
+      @include m.iconBg('/build/img/icono_pro.svg');
+   }
 
    &__price {
       font-size: 1.8rem;
@@ -40,6 +57,7 @@
       text-transform: uppercase;
    }
 
+   /* ===== Tablet =====*/
    @include m.tablet {
       border: none;
       transition-property: transform;
@@ -48,9 +66,20 @@
       &:hover {
          transform: scale(1.1);
       }
+
+      &:nth-child(2) {
+         order: unset;
+         // margin: -5rem 0;
+         margin-block: -5rem;
+         border-radius: 2rem;
+         background-position: 50% 7rem;
+         padding-top: calc(16rem + 5rem);
+         z-index: 999;
+      }
    }
 }
 
+/* ===== Mobile First =====*/
 .list {
    &__item {
       text-align: center;
@@ -61,29 +90,3 @@
       }
    }
 }
-
-/* +-+-+-+-+-+- FIXME: +-+-+-+-+-+- */
-.free {
-   @include m.iconBg('/build/img/icono_inicio.svg');
-}
-
-.business {
-   background-color: v.$primary;
-   @include m.iconBg('/build/img/icono_negocio.svg');
-   order: -1;
-
-   @include m.tablet {
-      order: unset;
-      // margin: -5rem 0;
-      margin-block: -5rem;
-      border-radius: 2rem;
-      background-position: 50% 7rem;
-      padding-top: calc(16rem + 5rem);
-      z-index: 999;
-   }
-}
-
-.pro {
-   @include m.iconBg('/build/img/icono_pro.svg');
-}
-/* +-+-+-+-+-+- FIXME: +-+-+-+-+-+- */
