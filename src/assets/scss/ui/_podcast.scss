@@ -1,0 +1,15 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.podcast {
+   @include m.tablet {
+      &__grid {
+         @include m.grid(2, 2rem);
+         align-items: center;
+      }
+   }
+
+   &__heading {
+      @include m.headingBorder(v.$secondary, v.$primary);
+   }
+}
