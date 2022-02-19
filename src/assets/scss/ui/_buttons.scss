@@ -4,3 +4,10 @@
 [class$='__button-primary'] {
    @include m.button(v.$primary, v.$secondary);
 }
+
+[class$='__button-plan'] {
+   @extend [class$='__button-primary'];
+   border: 0.2rem solid v.$white;
+   margin-top: 2rem;
+   display: block;
+}

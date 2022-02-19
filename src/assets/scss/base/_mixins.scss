@@ -75,3 +75,10 @@
       margin-top: 0;
    }
 }
+
+@mixin iconBg($url) {
+   background-image: url($url);
+   background-repeat: no-repeat;
+   background-position: 50% 2rem;
+   background-size: 10rem;
+}
