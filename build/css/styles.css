@@ -404,4 +404,67 @@ ul {
 .bg-primary {
   background-color: #84d9bc;
 }
+
+/* ===== Mobile First ===== */
+.header {
+  background-image: linear-gradient(rgba(57, 70, 89, 0.7) 0%, rgba(57, 70, 89, 0.7) 100%), url("/build/img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 5rem 0;
+  /* ===== Tablet ===== */
+  /* ===== Desktop ===== */
+}
+.header__logo {
+  max-width: 20rem;
+  margin: 0 auto;
+}
+.header__content {
+  padding: 10rem 0;
+}
+.header__heading {
+  color: #ffffff;
+  font-size: 4.5rem;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    margin: 0;
+  }
+  .header__heading {
+    font-size: 6rem;
+    max-width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .header__content {
+    padding: 15rem 0;
+  }
+  .header__heading {
+    max-width: 40%;
+  }
+}
+
+[class$=__button-primary] {
+  background-color: #84d9bc;
+  font-size: 2rem;
+  padding: 1.2rem 4rem;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #313c4e;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+[class$=__button-primary]:hover {
+  cursor: pointer;
+  background-color: #5dcda7;
+}
+@media (min-width: 768px) {
+  [class$=__button-primary] {
+    width: auto;
+    display: inline-block;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

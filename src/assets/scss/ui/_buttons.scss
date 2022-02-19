@@ -1,0 +1,6 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+[class$='__button-primary'] {
+   @include m.button(v.$primary, v.$secondary);
+}

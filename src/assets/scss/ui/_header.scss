@@ -1,0 +1,45 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+/* ===== Mobile First ===== */
+.header {
+   @include m.bgImage('/build/img/header.jpg', v.$secondary-opacity);
+   padding: 5rem 0;
+
+   &__logo {
+      max-width: 20rem;
+      margin: 0 auto;
+   }
+
+   &__content {
+      padding: 10rem 0;
+   }
+
+   &__heading {
+      color: v.$white;
+      font-size: 4.5rem;
+   }
+
+   /* ===== Tablet ===== */
+   @include m.tablet {
+      &__logo {
+         margin: 0;
+      }
+
+      &__heading {
+         font-size: 6rem;
+         max-width: 50%;
+      }
+   }
+
+   /* ===== Desktop ===== */
+   @include m.desktop {
+      &__content {
+         padding: 15rem 0;
+      }
+
+      &__heading {
+         max-width: 40%;
+      }
+   }
+}
